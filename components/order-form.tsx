@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -58,12 +57,38 @@ export function OrderForm() {
     setError("")
     setIsSubmitting(true)
 
-    // Simulate order submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      // 🚀 Telegram Bot Info
+      const TOKEN = "8521395314:AAErIoYX6okn89IjqnTzVG6XTGUCTcgd28w"
+      const CHAT_ID = "1798381739"
 
-    // Order confirmed
-    setStep("success")
-    setIsSubmitting(false)
+      // الرسالة اللي هتتبعت
+      const message = `
+📦 طلب جديد
+👤 الاسم: ${name}
+📞 الهاتف: ${phone}
+🏙️ المحافظة: ${city}
+📍 العنوان: ${address}
+`
+
+      // إرسال الطلب للبوت
+      await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+        }),
+      })
+
+      // تغيير الخطوة لنجاح الطلب
+      setStep("success")
+    } catch (err) {
+      console.error(err)
+      setError("حدث خطأ، حاول مرة أخرى")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (step === "success") {
@@ -165,7 +190,7 @@ export function OrderForm() {
               </Button>
 
               <p className="text-center text-muted-foreground text-sm">
-             الدفع عند الاستلام •    
+                الدفع عند الاستلام •
               </p>
             </form>
           </CardContent>
