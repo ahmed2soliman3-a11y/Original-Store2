@@ -17,7 +17,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="mb-8 mt-8 flex justify-center">
           <Image
-            src="/صوره الموقع2.jpg"
+            src="/صوره الموقع3 .png"
             alt="عطرين بنص السعر - Sauvage و Khamrah"
             width={600}
             height={500}
