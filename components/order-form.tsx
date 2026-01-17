@@ -165,7 +165,7 @@ export function OrderForm() {
               </Button>
 
               <p className="text-center text-muted-foreground text-sm">
-                الدفع عند الاستلام • شحن مجاني للقاهرة والجيزة
+             الدفع عند الاستلام •    
               </p>
             </form>
           </CardContent>
