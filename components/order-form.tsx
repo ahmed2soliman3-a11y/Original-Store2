@@ -10,33 +10,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle2, Loader2 } from "lucide-react"
 
 const egyptianCities = [
-  "القاهرة",
-  "الجيزة",
-  "الإسكندرية",
-  "الدقهلية",
-  "الشرقية",
-  "المنوفية",
-  "القليوبية",
-  "البحيرة",
-  "الغربية",
-  "كفر الشيخ",
-  "دمياط",
-  "بورسعيد",
-  "الإسماعيلية",
-  "السويس",
-  "شمال سيناء",
-  "جنوب سيناء",
-  "البحر الأحمر",
-  "الفيوم",
-  "بني سويف",
-  "المنيا",
-  "أسيوط",
-  "سوهاج",
-  "قنا",
-  "الأقصر",
-  "أسوان",
-  "الوادي الجديد",
-  "مطروح",
+  "القاهرة","الجيزة","الإسكندرية","الدقهلية","الشرقية","المنوفية","القليوبية",
+  "البحيرة","الغربية","كفر الشيخ","دمياط","بورسعيد","الإسماعيلية","السويس",
+  "شمال سيناء","جنوب سيناء","البحر الأحمر","الفيوم","بني سويف","المنيا",
+  "أسيوط","سوهاج","قنا","الأقصر","أسوان","الوادي الجديد","مطروح",
 ]
 
 type FormStep = "details" | "success"
@@ -46,7 +23,7 @@ export function OrderForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState("")
 
-  // Form data
+  // بيانات الفورم
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
   const [city, setCity] = useState("")
@@ -58,11 +35,10 @@ export function OrderForm() {
     setIsSubmitting(true)
 
     try {
-      // 🚀 Telegram Bot Info
-      const TOKEN = "8521395314:AAErIoYX6okn89IjqnTzVG6XTGUCTcgd28w"
+      // 🔒 توكن البوت الآمن من .env.local
+      const TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN
       const CHAT_ID = "1798381739"
 
-      // الرسالة اللي هتتبعت
       const message = `
 📦 طلب جديد
 👤 الاسم: ${name}
@@ -71,7 +47,6 @@ export function OrderForm() {
 📍 العنوان: ${address}
 `
 
-      // إرسال الطلب للبوت
       await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -81,7 +56,6 @@ export function OrderForm() {
         }),
       })
 
-      // تغيير الخطوة لنجاح الطلب
       setStep("success")
     } catch (err) {
       console.error(err)
