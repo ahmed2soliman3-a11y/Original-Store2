@@ -28,7 +28,7 @@ export function StickyOrderButton() {
         size="lg"
         className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6 rounded-full"
       >
-        اطلب الآن - 1000 ج.م
+        اطلب الآن - 500 ج.م
       </Button>
     </div>
   )
