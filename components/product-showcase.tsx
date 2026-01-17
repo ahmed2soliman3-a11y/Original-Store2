@@ -1,35 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import Image from "next/image"
 
-const perfumes = [
-  {
-    name: "Dior Sauvage",
-    description: "عطر رجالي جريء بروائح البرغموت والفلفل",
-    image: "/dior-sauvage-luxury-perfume-bottle-dark-background.jpg",
-  },
-  {
-    name: "Khamrah",
-    description: "عطر شرقي فاخر بروائح العود والعنبر",
-    image: "/lattafa-khamrah-luxury-perfume-bottle-dark-backgro.jpg",
-  },
-  {
-    name: "Paco Rabanne 1 Million",
-    description: "عطر ذهبي فاخر بروائح الجلد والتوابل",
-    image: "/paco-rabanne-1-million-gold-perfume-bottle-dark-ba.jpg",
-  },
-  {
-    name: "Versace Eros",
-    description: "عطر إيطالي أنيق بروائح النعناع والفانيليا",
-    image: "/versace-eros-blue-perfume-bottle-dark-background.jpg",
-  },
-  {
-    name: "Bleu de Chanel",
-    description: "عطر فرنسي راقي بروائح الحمضيات والخشب",
-    image: "/bleu-de-chanel-perfume-bottle-dark-background.jpg",
-  },
-]
 
 export function ProductShowcase() {
   return (
