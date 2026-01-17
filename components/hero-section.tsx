@@ -1,4 +1,4 @@
-"use client"
+""use client"
 
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
@@ -32,7 +32,7 @@ export function HeroSection() {
         </h1>
 
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          مجموعة حصرية من أفخم  العطور عالمية    
+          مجموعة حصرية من أفخم العطور عالمية
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -42,14 +42,6 @@ export function HeroSection() {
             className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-6 rounded-full"
           >
             اطلب الآن
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
-            className="border-border text-foreground hover:bg-secondary text-lg px-10 py-6 rounded-full"
-          >
-            اكتشف العطور
           </Button>
         </div>
       </div>
