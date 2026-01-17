@@ -16,8 +16,6 @@ export function PricingSection() {
          
         <span className="font-sans text-5xl md:text-6xl font-bold text-primary">500 ج.م</span>
 
-         
-          </span>
         </div>
 
         <p className="text-muted-foreground mb-10">ينتهي العرض خلال:</p>
