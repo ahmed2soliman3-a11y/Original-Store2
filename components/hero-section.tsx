@@ -32,7 +32,7 @@ export function HeroSection() {
         </h1>
 
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          مجموعة حصرية من أفخم العطور عالمية
+          مجموعة حصرية من أفخم العطور العالمية
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
