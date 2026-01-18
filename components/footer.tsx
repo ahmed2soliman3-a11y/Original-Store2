@@ -16,7 +16,7 @@ export function Footer() {
 
         {/* أيقونات السوشيال */}
         <div className="flex justify-center gap-6 mb-4 text-2xl">
-          
+
           {/* Facebook */}
           <a
             href="https://www.facebook.com/profile.php?id=100076287960804&locale=ar_AR"
@@ -54,7 +54,9 @@ export function Footer() {
           © 2026 Original Store. جميع الحقوق محفوظة.
         </p>
       </div>
-      <div id="space" style="margin-top:50px"></div>
+
+      {/* المسافة تحت الفوتر */}
+      <div id="space" style={{ marginTop: "50px" }}></div>
     </footer>
   )
 }
