@@ -54,6 +54,7 @@ export function Footer() {
           © 2026 Original Store. جميع الحقوق محفوظة.
         </p>
       </div>
+      <div id="space" style="margin-top:50px"></div>
     </footer>
   )
 }
