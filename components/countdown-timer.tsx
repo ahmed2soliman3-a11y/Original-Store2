@@ -12,7 +12,7 @@ export function CountdownTimer() {
 
   useEffect(() => {
     const targetDate = new Date()
-    targetDate.setDate(targetDate.getDate() + 3)
+    targetDate.setDate(targetDate.getDate() + 0)
     targetDate.setHours(23, 59, 59, 999)
 
     const interval = setInterval(() => {
